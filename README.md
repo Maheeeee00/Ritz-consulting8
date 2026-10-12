@@ -13,6 +13,7 @@ Plain HTML + CSS + one JavaScript file. No build step — it deploys as-is on Ve
 - About — `about.html` (story, approach, values, people, case studies)
 - Pricing & Packages — `pricing.html`
 - Contact — `contact.html` (enquiry form, online meeting booking, time zones)
+- Price List 2026–27 — `price-list.html`: visitors tick services and quantities, add their details, see a starting estimate (ex GST, GST, inc GST), then **download their completed form as a PDF** or **send it to Ritz**. Also offers the full price list as a PDF and a blank fillable PDF form (`assets/docs/`).
 - `404.html`, `sitemap.xml`, `robots.txt`, `vercel.json`
 
 ## Before launch — 3 settings in `assets/js/main.js` (top of the file)
@@ -21,6 +22,11 @@ Plain HTML + CSS + one JavaScript file. No build step — it deploys as-is on Ve
 | `formEndpoint` | Where enquiries and assessment results are emailed. Create a free form at formspree.io and paste its URL, e.g. `https://formspree.io/f/abcdwxyz`. **Until this is set, forms only show a thank-you message and nothing is sent.** |
 | `bookingUrl` | Online meeting booking link (Calendly, Microsoft Bookings, etc.). Visitors pick a time in their own time zone. |
 | `ga4Id` | Google Analytics 4 ID, e.g. `G-XXXXXXXXXX`. Tracks enquiries, assessment completions and framework clicks. You can also turn on Vercel Analytics in the Vercel dashboard. |
+
+## Price list form
+- To change a price, ask your developer to update the price list data and rebuild; it updates the page and all three PDFs together.
+- PDFs are created in the visitor's browser (`assets/js/vendor/` — jsPDF and jsPDF-AutoTable, MIT licence). No server needed.
+- "Send to Ritz" uses the same `formEndpoint` setting as the other forms.
 
 ## Content to replace
 - **Team profiles** and **case studies** are sample content (labelled on the site).
